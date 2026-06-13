@@ -1,0 +1,673 @@
+/* ========================================
+   RESET
+======================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Orbitron',sans-serif;
+
+    background:#050816;
+
+    color:#ffffff;
+
+    overflow-x:hidden;
+}
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#050816;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#39ff14;
+
+    border-radius:50px;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:80px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 8%;
+
+    z-index:1000;
+
+    background:rgba(5,8,22,.75);
+
+    backdrop-filter:blur(10px);
+
+    transition:.3s;
+}
+
+.header-scroll{
+
+    background:rgba(5,8,22,.95);
+
+    box-shadow:
+    0 5px 25px rgba(0,0,0,.4);
+}
+
+.logo{
+
+    font-size:1.5rem;
+
+    font-weight:700;
+
+    color:#39ff14;
+
+    text-shadow:
+    0 0 10px #39ff14;
+}
+
+nav{
+
+    display:flex;
+
+    gap:30px;
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    transition:.3s;
+}
+
+nav a:hover{
+
+    color:#39ff14;
+}
+
+#menu-btn{
+
+    display:none;
+
+    font-size:2rem;
+
+    cursor:pointer;
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    background-image:
+    url('../images/hero.png');
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+    rgba(5,8,22,.85),
+    rgba(5,8,22,.95)
+    );
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:900px;
+
+    padding:20px;
+}
+
+.badge{
+
+    display:inline-block;
+
+    padding:12px 22px;
+
+    border-radius:50px;
+
+    border:1px solid #39ff14;
+
+    background:
+    rgba(57,255,20,.1);
+
+    color:#39ff14;
+
+    margin-bottom:25px;
+}
+
+.hero h1{
+
+    font-size:6rem;
+
+    margin-bottom:20px;
+
+    text-shadow:
+    0 0 25px #39ff14;
+}
+
+.hero p{
+
+    font-size:1.3rem;
+
+    line-height:1.8;
+
+    color:#d0d0d0;
+
+    margin-bottom:40px;
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    padding:16px 40px;
+
+    border-radius:50px;
+
+    transition:.3s;
+}
+
+.btn-primary,
+.btn{
+
+    background:#39ff14;
+
+    color:#050816;
+
+    font-weight:bold;
+}
+
+.btn-secondary{
+
+    border:2px solid #39ff14;
+
+    color:white;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 0 20px #39ff14;
+}
+
+/* ========================================
+   SEÇÕES
+======================================== */
+
+section{
+
+    padding:100px 8%;
+}
+
+section h2{
+
+    text-align:center;
+
+    font-size:3rem;
+
+    margin-bottom:50px;
+
+    color:#39ff14;
+}
+
+/* ========================================
+   SOBRE
+======================================== */
+
+.sobre-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:30px;
+}
+
+.sobre-container div{
+
+    background:#0f172a;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:.3s;
+}
+
+.sobre-container div:hover{
+
+    transform:translateY(-5px);
+}
+
+.sobre-container h3{
+
+    color:#39ff14;
+
+    margin-bottom:15px;
+}
+
+.sobre-container p{
+
+    line-height:1.8;
+}
+
+/* ========================================
+   RECURSOS
+======================================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+}
+
+.card{
+
+    background:#0f172a;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:.3s;
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#39ff14;
+
+    box-shadow:
+    0 0 20px rgba(57,255,20,.2);
+}
+
+.card h3{
+
+    margin-bottom:15px;
+
+    color:#39ff14;
+}
+
+.card p{
+
+    line-height:1.7;
+}
+
+/* ========================================
+   CONTADOR
+======================================== */
+
+.contador{
+
+    text-align:center;
+}
+
+.contador h2{
+
+    font-size:4rem;
+}
+
+#counter{
+
+    color:#00e5ff;
+
+    text-shadow:
+    0 0 20px #00e5ff;
+}
+
+/* ========================================
+   GALERIA
+======================================== */
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(350px,1fr));
+
+    gap:30px;
+}
+
+.gallery-grid img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    transition:.4s;
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:
+    0 0 25px rgba(57,255,20,.3);
+}
+
+/* ========================================
+   MODAL
+======================================== */
+
+.modal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    rgba(0,0,0,.95);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+}
+
+.modal img{
+
+    width:90%;
+
+    max-width:1200px;
+
+    border-radius:15px;
+}
+
+#close{
+
+    position:absolute;
+
+    top:20px;
+
+    right:40px;
+
+    font-size:50px;
+
+    cursor:pointer;
+}
+
+/* ========================================
+   CTA
+======================================== */
+
+.cta{
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+    135deg,
+    #0f172a,
+    #111827
+    );
+}
+
+.cta p{
+
+    max-width:700px;
+
+    margin:0 auto 30px;
+
+    line-height:1.8;
+
+    color:#cfcfcf;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer{
+
+    text-align:center;
+
+    padding:40px;
+
+    background:#02040d;
+}
+
+footer p{
+
+    margin:10px 0;
+}
+
+/* ========================================
+   BOTÃO TOPO
+======================================== */
+
+#topBtn{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#39ff14;
+
+    color:#050816;
+
+    cursor:pointer;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    z-index:999;
+}
+
+/* ========================================
+   ANIMAÇÕES
+======================================== */
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:
+    .8s ease;
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+/* ========================================
+   RESPONSIVO
+======================================== */
+
+@media(max-width:900px){
+
+    .hero h1{
+
+        font-size:4rem;
+    }
+
+    .sobre-container{
+
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:768px){
+
+    nav{
+
+        position:absolute;
+
+        top:80px;
+
+        left:0;
+
+        width:100%;
+
+        background:#050816;
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:20px;
+
+        display:none;
+    }
+
+    nav.active{
+
+        display:flex;
+    }
+
+    #menu-btn{
+
+        display:block;
+    }
+
+    .hero h1{
+
+        font-size:3rem;
+    }
+
+    .hero p{
+
+        font-size:1rem;
+    }
+
+    section h2{
+
+        font-size:2.2rem;
+    }
+
+    .contador h2{
+
+        font-size:2.5rem;
+    }
+}
+
+@media(max-width:480px){
+
+    .hero h1{
+
+        font-size:2.4rem;
+    }
+
+    .badge{
+
+        font-size:.8rem;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn{
+
+        width:100%;
+    }
+}
